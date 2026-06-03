@@ -1,0 +1,27 @@
+{
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/bhuwan/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+        "/home/bhuwan/ros2_ws/build/robo_controller",
+        "/home/bhuwan/ros2_ws/install/robo_controller/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_ws/install/everything/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_practice/build/practice_pkg",
+        "/home/bhuwan/ros2_practice/install/practice_pkg/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_practice/build/practice_node",
+        "/home/bhuwan/ros2_practice/install/practice_node/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/bhuwan/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages",
+        "/home/bhuwan/ros2_ws/build/robo_controller",
+        "/home/bhuwan/ros2_ws/install/robo_controller/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_ws/install/everything/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_practice/build/practice_pkg",
+        "/home/bhuwan/ros2_practice/install/practice_pkg/lib/python3.10/site-packages",
+        "/home/bhuwan/ros2_practice/build/practice_node",
+        "/home/bhuwan/ros2_practice/install/practice_node/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
