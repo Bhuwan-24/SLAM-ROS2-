@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
 <robot name="box_car">
 
-    <link name="base_link">
-        </link>
+    <link name="base_link"></link>
 
     <joint name="base_to_chasis_joint" type="fixed">
         <parent link="base_link"/>
         <child link="chasis"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
     </joint>
 
     <link name="chasis">
@@ -19,6 +18,100 @@
             <material name="blue">
                 <color rgba="0 0 1 1" />
             </material>        
+        </visual>
+    </link>
+
+    <joint name="chasis_to_lidar_joint" type="fixed">
+        <parent link="chasis"/>
+        <child link="lidar"/>
+        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="lidar">
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.1" length="0.1"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="fr_wheeltochasis" type="continuous">
+        <parent link="chasis" />
+        <child link="fr_wheel" />
+        <origin xyz="0.3 0.2 0.05" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="fr_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="fl_wheeltochasis" type="continuous">
+        <parent link="chasis" />
+        <child link="fl_wheel" />
+        <origin xyz="0.3 -0.2 0.05" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="fl_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="br_wheeltochasis" type="continuous">
+        <parent link="chasis" />
+        <child link="br_wheel" />
+        <origin xyz="-0.3 0.2 0.05" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="br_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="bl_wheeltochasis" type="continuous">
+        <parent link="chasis" />
+        <child link="bl_wheel" />
+        <origin xyz="-0.3 -0.2 0.05" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="bl_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1"/>
+            </material>
         </visual>
     </link>
 
