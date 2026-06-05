@@ -11,7 +11,7 @@
 
     <link name="chasis">
         <visual>
-            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
             <geometry>
                 <box size="0.8 0.4 0.2" />
             </geometry>
@@ -24,7 +24,7 @@
     <joint name="chasis_to_lidar_joint" type="fixed">
         <parent link="chasis"/>
         <child link="lidar"/>
-        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
     </joint>
 
     <link name="lidar">
@@ -42,7 +42,7 @@
     <joint name="fr_wheeltochasis" type="continuous">
         <parent link="chasis" />
         <child link="fr_wheel" />
-        <origin xyz="0.3 0.2 0.05" rpy="0 0 0" />
+        <origin xyz="0.3 0.205 0.0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
@@ -61,7 +61,7 @@
     <joint name="fl_wheeltochasis" type="continuous">
         <parent link="chasis" />
         <child link="fl_wheel" />
-        <origin xyz="0.3 -0.2 0.05" rpy="0 0 0" />
+        <origin xyz="0.3 -0.205 0.0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
@@ -80,7 +80,7 @@
     <joint name="br_wheeltochasis" type="continuous">
         <parent link="chasis" />
         <child link="br_wheel" />
-        <origin xyz="-0.3 0.2 0.05" rpy="0 0 0" />
+        <origin xyz="-0.3 0.205 0.0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
@@ -99,7 +99,7 @@
     <joint name="bl_wheeltochasis" type="continuous">
         <parent link="chasis" />
         <child link="bl_wheel" />
-        <origin xyz="-0.3 -0.2 0.05" rpy="0 0 0" />
+        <origin xyz="-0.3 -0.205 0.0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
@@ -111,6 +111,24 @@
             </geometry>
             <material name="yellow">
                 <color rgba="1 1 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="camera_to_chasis" type="fixed">
+        <parent link="chasis" />
+        <child link="camera" />
+        <origin xyz="0.4 0 0.05" rpy="0 0 0" />
+    </joint>
+
+    <link name="camera">
+        <visual>
+            <origin xyz="0.025 0 0" rpy="0 1.5708 0" />
+            <geometry>
+                <cylinder radius="0.03" length="0.05" />           
+            </geometry>
+            <material name="uk">
+                <color rgba="0 1 1 1" />
             </material>
         </visual>
     </link>
