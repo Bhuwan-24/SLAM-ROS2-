@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="robotic_arm">
+
+<link name="base_link"></link>
+    <joint name="base_to_chasis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </joint>
+<link name="base">
+    <visual>
+        <origin xyz="0 0 0.01" rpy="0 0 0" />
+        <geometry>
+            <cylinder radius="0.2" length="0.3" />
+        </geometry>
+        <material name="red">
+            <color rgba="1 0 0 1" />
+        </material>
+    </visual>
+</link>
+</robot>
